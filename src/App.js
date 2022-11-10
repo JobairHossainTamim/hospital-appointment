@@ -34,19 +34,19 @@ function App() {
         }
         <Toaster position="top-center" reverseOrder={false} />
         <Routes>
-          <Route path='/' element={<ProtectedRoute><Home></Home></ProtectedRoute>}></Route>
-          <Route path='/login' element={<PublicRoute><Login></Login></PublicRoute>}></Route>
-          <Route path='/registration' element={<PublicRoute><Register></Register></PublicRoute>}></Route>
-          <Route path='/home' element={<ProtectedRoute><Home></Home></ProtectedRoute>}></Route>
-          <Route path='/apply-doctor' element={<ProtectedRoute><ApplyDoctors></ApplyDoctors></ProtectedRoute>}></Route>
-          <Route path='/notifications' element={<ProtectedRoute><Notification></Notification></ProtectedRoute>}></Route>
-          <Route path='/admin/doctorslist' element={<ProtectedRoute><DoctorList></DoctorList></ProtectedRoute>}></Route>
-          <Route path='/admin/userslist' element={<ProtectedRoute><UserList></UserList></ProtectedRoute>}></Route>
-          <Route path='/doctor/profile/:doctorId' element={<ProtectedRoute><Profile></Profile></ProtectedRoute>}></Route>
-          <Route path='/doctor/appointment' element={<ProtectedRoute><Appointment></Appointment></ProtectedRoute>}></Route>
-          <Route path='/book-appointment/:doctorId' element={<ProtectedRoute><BookAppointment></BookAppointment></ProtectedRoute>}></Route>
-          <Route path='/user/book-appointment' element={<ProtectedRoute><UserAppointment></UserAppointment></ProtectedRoute>}></Route>
-          <Route path='/about' element={<ProtectedRoute><About></About></ProtectedRoute>}></Route>
+          <Route exact path='/' element={<ProtectedRoute><Home></Home></ProtectedRoute>}></Route>
+          <Route exact path='/login' element={<PublicRoute><Login></Login></PublicRoute>}></Route>
+          <Route exact path='/registration' element={<PublicRoute><Register></Register></PublicRoute>}></Route>
+          <Route exact path='/home' element={<ProtectedRoute><Home></Home></ProtectedRoute>}></Route>
+          <Route exact path='/apply-doctor' element={<ProtectedRoute><ApplyDoctors></ApplyDoctors></ProtectedRoute>}></Route>
+          <Route exact path='/notifications' element={<ProtectedRoute><Notification></Notification></ProtectedRoute>}></Route>
+          <Route exact path='/admin/doctorslist' element={<ProtectedRoute><DoctorList></DoctorList></ProtectedRoute>}></Route>
+          <Route exact path='/admin/userslist' element={<ProtectedRoute><UserList></UserList></ProtectedRoute>}></Route>
+          <Route exact path='/doctor/profile/:doctorId' element={<ProtectedRoute><Profile></Profile></ProtectedRoute>}></Route>
+          <Route exact path='/doctor/appointment' element={<ProtectedRoute><Appointment></Appointment></ProtectedRoute>}></Route>
+          <Route exact path='/book-appointment/:doctorId' element={<ProtectedRoute><BookAppointment></BookAppointment></ProtectedRoute>}></Route>
+          <Route exact path='/user/book-appointment' element={<ProtectedRoute><UserAppointment></UserAppointment></ProtectedRoute>}></Route>
+          <Route exact path='/about' element={<ProtectedRoute><About></About></ProtectedRoute>}></Route>
 
         </Routes>
       </Router>
