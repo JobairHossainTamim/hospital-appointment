@@ -14,10 +14,9 @@ function Login() {
   const onFinish=async(values)=>{
     try{
       dispatch(showLoading());
-      const response=await axios.post('/api/user/login' ,values);
+      const response=await axios.post('https://hospital-server-production.up.railway.app/api/user/login' ,values);
       if(response.data.success){
         toast.success(response.data.message);
-        toast("Redirect To Home Page");
         localStorage.setItem("token" ,response.data.data)
         navigate('/home')
         dispatch(hideLoading())

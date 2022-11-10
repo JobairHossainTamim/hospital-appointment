@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Layout.css';
 import { useSelector } from 'react-redux';
 import { Badge } from 'antd';
@@ -86,10 +86,10 @@ const Layout = ({ children }) => {
 
                     </div>
                     <div className='menu'>
-                        {menuToBeRendered.map(menu => {
+                        {menuToBeRendered.map((menu,index) => {
                             const isActive = location.pathname === menu.path;
                             return (
-                                <div className={`d-flex menu-item ${isActive && 'active-menu-item'}`} key={menu.path}>
+                                <div className={`d-flex menu-item ${isActive && 'active-menu-item'}`} key={index}>
                                     <i className={menu.icon}></i>
                                     {!collapsed && <Link to={menu.path}>{menu.name}</Link>}
                                 </div>)

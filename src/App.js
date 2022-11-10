@@ -3,7 +3,7 @@ import './App.css';
 
 import 'antd/dist/antd.min.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import toast, { Toaster } from 'react-hot-toast';
+import  { Toaster } from 'react-hot-toast';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import Home from "./Pages/Home/Home";
