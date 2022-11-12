@@ -24,7 +24,7 @@ const BookAppointment = () => {
     const getDoctorData = async () => {
         try {
             dispatch(showLoading());
-            const response = await axios.post("/api/doctor/get-doctor-info-by-id", { doctorId: params.doctorId, },
+            const response = await axios.post("https://hospital-server-production.up.railway.app/api/doctor/get-doctor-info-by-id", { doctorId: params.doctorId, },
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -46,7 +46,7 @@ const BookAppointment = () => {
         try {
           dispatch(showLoading());
           const response = await axios.post(
-            "/api/user/check-booking-availability",
+            "https://hospital-server-production.up.railway.app/api/user/check-booking-availability",
             {
               doctorId: params.doctorId,
               date: date,
@@ -75,7 +75,7 @@ const BookAppointment = () => {
         setIsAvailable(false);
         try {
             dispatch(showLoading());
-            const response = await axios.post("/api/user/book-appointment",{doctorId: params.doctorId,
+            const response = await axios.post("https://hospital-server-production.up.railway.app/api/user/book-appointment",{doctorId: params.doctorId,
                     userId: user._id,
                     doctorInfo: doctor,
                     userInfo: user,

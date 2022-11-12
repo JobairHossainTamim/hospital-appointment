@@ -16,7 +16,7 @@ const UserList = () => {
     const getUsersData = async () => {
         try {
             dispatch(showLoading());
-            const response = await axios.get("/api/admin/get-all-users", {
+            const response = await axios.get("https://hospital-server-production.up.railway.app/api/admin/get-all-users", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },

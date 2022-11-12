@@ -16,7 +16,7 @@ const DoctorList = () => {
     const getDoctorsData = async () => {
         try {
             dispatch(showLoading());
-            const response = await axios.get("/api/admin/get-all-doctors", {
+            const response = await axios.get("https://hospital-server-production.up.railway.app/api/admin/get-all-doctors", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
@@ -40,7 +40,7 @@ const DoctorList = () => {
     const changeDoctorStatus =async(record, status) => {
         try {
             dispatch(showLoading());
-            const response = await axios.post("/api/admin/change-doctor-account-status",{ doctorId: record._id, userId: record.userId, status: status },
+            const response = await axios.post("https://hospital-server-production.up.railway.app/api/admin/change-doctor-account-status",{ doctorId: record._id, userId: record.userId, status: status },
               {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -25,7 +25,7 @@ const Profile = () => {
     const getDoctorData = async () => {
         try {
             dispatch(showLoading());
-            const response = await axios.post("/api/doctor/get-doctor-info-by-user-id", { userId: params.userId, },
+            const response = await axios.post("https://hospital-server-production.up.railway.app/api/doctor/get-doctor-info-by-user-id", { userId: params.userId, },
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -55,7 +55,7 @@ const Profile = () => {
         try {
           dispatch(showLoading());
           const response = await axios.post(
-            "/api/doctor/update-doctor-profile",
+            "https://hospital-server-production.up.railway.app/api/doctor/update-doctor-profile",
             {
               ...values,
               userId: user._id,
