@@ -17,7 +17,7 @@ const Appointment = () => {
     const getAppointmentsData = async () => {
         try {
             dispatch(showLoading());
-            const response = await axios.get("https://hospital-server-production.up.railway.app/api/doctor/get-appointments-by-doctor-id", {
+            const response = await axios.get("https://hospital-server-22we.onrender.com/api/doctor/get-appointments-by-doctor-id", {
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}`, },
             }
             );
@@ -37,7 +37,7 @@ const Appointment = () => {
         try {
             dispatch(showLoading());
             const response = await axios.post(
-                "https://hospital-server-production.up.railway.app/api/doctor/change-appointment-status",
+                "https://hospital-server-22we.onrender.com/api/doctor/change-appointment-status",
                 { appointmentId: record._id, status: status },
                 {
                     headers: {

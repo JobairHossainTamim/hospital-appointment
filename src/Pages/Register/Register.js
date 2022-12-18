@@ -18,7 +18,7 @@ function Register() {
 const onFinish=async(values)=>{
   try{
     dispatch(showLoading())
-    const response=await axios.post('https://hospital-server-production.up.railway.app/api/user/register' ,values);
+    const response=await axios.post('https://hospital-server-22we.onrender.com/api/user/register' ,values);
     if(response.data.success){
       toast.success(response.data.message);
       toast("Redirect To Login Page");

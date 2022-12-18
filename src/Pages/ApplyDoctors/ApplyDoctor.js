@@ -16,7 +16,7 @@ const ApplyDoctors = () => {
     const onFinish = async (values) => {
         try {
             dispatch(showLoading())
-            const response = await axios.post('https://hospital-server-production.up.railway.app/api/user/apply-doctor-account', { ...values, userId: user._id },{
+            const response = await axios.post('https://hospital-server-22we.onrender.com/api/user/apply-doctor-account', { ...values, userId: user._id },{
                 headers: {
                    Authorization: `Bearer ${localStorage.getItem('token')}`,
                 },

@@ -15,7 +15,7 @@ const UserAppointment = () => {
     const getAppointmentsData = async () => {
         try {
             dispatch(showLoading());
-            const resposne = await axios.get("https://hospital-server-production.up.railway.app/api/user/get-appointments-by-user-id", {
+            const resposne = await axios.get("https://hospital-server-22we.onrender.com/api/user/get-appointments-by-user-id", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },

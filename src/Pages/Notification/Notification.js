@@ -18,7 +18,7 @@ const Notification = () => {
     const markAllAsSeen = async () => {
         try {
             dispatch(showLoading());
-            const response = await axios.post("https://hospital-server-production.up.railway.app/api/user/mark-all-notifications-as-seen", { userId: user._id }, {
+            const response = await axios.post("https://hospital-server-22we.onrender.com/api/user/mark-all-notifications-as-seen", { userId: user._id }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }
@@ -39,7 +39,7 @@ const Notification = () => {
     const deleteAll = async () => {
         try {
             dispatch(showLoading());
-            const response = await axios.post("https://hospital-server-production.up.railway.app/api/user/delete-all-notifications", { userId: user._id }, {
+            const response = await axios.post("https://hospital-server-22we.onrender.com/api/user/delete-all-notifications", { userId: user._id }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }
